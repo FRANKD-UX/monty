@@ -1,5 +1,9 @@
 #include "monty.h"
 
+/**
+	* free_stack - Frees a stack.
+	* @stack: Pointer to the stack to be freed.
+	*/
 void free_stack(stack_t *stack)
 {
 	stack_t *temp;
@@ -12,10 +16,17 @@ void free_stack(stack_t *stack)
 	}
 }
 
+/**
+	* execute - Executes the opcode.
+	* @opcode: The opcode to be executed.
+	* @stack: Double pointer to the stack.
+	* @line_number: Line number of the instruction.
+	*/
 void execute(char *opcode, stack_t **stack, unsigned int line_number)
 {
 	instruction_t instructions[] = {
 	{"pall", pall},
+	{"pint", pint},
 	{NULL, NULL}
 	};
 	int i = 0;
