@@ -27,4 +27,3 @@ void execute(char *opcode, stack_t **stack, unsigned int line_number);
 void malloc_error(void);
 
 #endif /* MONTY_H */
-
